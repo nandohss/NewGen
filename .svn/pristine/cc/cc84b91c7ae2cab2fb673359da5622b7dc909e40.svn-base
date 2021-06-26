@@ -1,0 +1,64 @@
+/*Inicio Login*/
+body{
+    background-color: #F1F1F1;
+}
+.topLogin{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1px;
+}
+
+.topLogin h1{
+    margin:15px;
+    font-size: 3.5rem;
+}
+
+.gif{
+    width: 25%;
+    margin-right: 1rem;
+}
+
+#BodyLogin{
+    width: 400px;
+    height: auto;
+    margin:auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-bottom: .5rem;
+}
+
+#title{
+    background-color: #AAAAAA;
+    color: #fff;
+    width: auto;
+    height: 40px;
+    margin:auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*Fim Login*/
+
+.topRegister{
+    text-align: center;
+}
+
+#BodyRegister{
+   margin:auto;
+    width: 600px;
+    text-align: left;   
+}
+
+.bodyHome{
+    font-size: 2rem;
+}
+
+
+
+
+
