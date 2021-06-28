@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,70 +9,73 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="{% static css/style.css %}"/>
 
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{% static img/favicon.png %}" type="image/x-icon"/>
 
-    <title>SGC - Cadastro Administrador</title>
+    <title>SGC - Cadastro Funcionários</title>
 </head>
 <body>
     <div class="container-fluid">
 
         <div class="topRegister">
-            <h1>Cadastro Administrador</h1>    
+            <h1>Cadastro de Funcionários</h1>    
         </div>
         
         <div id="BodyRegister">
             <form method="post" action="#">
+                {% csrf_token %}
            
                 <div class="form-group row">
-                    <label class="control-label col-sm-3" for="id_socialname">Nome Social:</label>
+                    <label class="control-label col-sm-3" for="nome">Nome:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="id_socialname" autofocus autocomplete="socialname" 
-                        required name="ocialname">
+                        <input type="text" class="form-control" id="nome" autofocus autocomplete="nome" 
+                        required name="nome">
                     </div>
                 </div>
-                
                 <div class="form-group row">
-                    <label class="control-label col-sm-3" for="id_cnpj">CNPJ:</label>
+                    <label class="control-label col-sm-3" for="cpf">CPF:</label>
                     <div class="col-sm-8">
                         <input type="number" class="form-control" 
-                        id="id_cnpj" name="inputcnpj" placeholder="XX.XXX.XXX/0001-XX">
+                        id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="control-label col-sm-3" for="id_phone">Telefone:</label>
+                    <label class="control-label col-sm-3" for="telefone">Telefone:</label>
                     <div class="col-sm-8">
                         <input type="number" class="form-control" 
-                        id="id_phone" name="inputcnpj" placeholder="(XX) XXXX-XXXX">
+                        id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-sm-3" for="id_phone">E-mail:</label>
                     <div class="col-sm-8">
                         <input type="email" class="form-control" 
-                        id="id_phone" name="id_phone" placeholder="exemplo@dominio">
-                    </div>
+                        id="id_phone" name="email" placeholder="exemplo@dominio">
+                    </div> 
                 </div>
-                
                 <div class="form-group row">
                     <label class="control-label col-sm-3" for="id_adress">Endereço:</label>
                     <div class="col-sm-8">
                         <input type="number" class="form-control" 
-                        id="id_adress" name="inputadress">
+                        id="id_adress" name="id_endereco">
                     </div>
                 </div>
-               
+                <div class="form-group row">
+                    <label class="control-label col-sm-8" for="id_sexo">Sexo:</p>
+                    <input type="radio" name="genero" value="masculino" id="masculino" checked>
+                    <label for="masculino">masculino</label>
+                    <input type="radio" name="genero" value="feminino" id="feminino">
+                    <label for="feminino">feminino</label>
+                </div>
+                
                     <input type="submit" value="Finalizar" class="btn btn-primary">
                 </form>
             </div>
+    
         </div>
-        <!-- <div class="col-6" id="config">
-            <div class="p-3 border bg-light">
-                <p><a href="configAdmin.html">Configuração</a></p>
-            </div>
-          </div> -->
+
     </div>
 </body>
 </html>

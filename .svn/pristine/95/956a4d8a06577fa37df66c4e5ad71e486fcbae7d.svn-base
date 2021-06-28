@@ -1,0 +1,11 @@
+# application related urls
+
+from django.contrib import admin
+from django.urls import path
+from .views import loginUser, loginSystem
+
+urlpatterns = [
+    # path('home', home, name='home'),
+    path('accounts/loginUser', loginUser, name='loginUser'),
+    path('accounts/loginSystem', loginSystem, name='loginSystem'),
+]
