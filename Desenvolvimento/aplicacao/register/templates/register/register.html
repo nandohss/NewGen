@@ -1,0 +1,173 @@
+﻿{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon"/>
+
+    <title>SGC - Cadastro Administrador</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="topRegister">
+            <h1>Cadastro</h1>    
+        </div>
+        
+        {% load crispy_forms_tags %}
+
+        <div id="BodyRegister">
+            <form method="POST" class="form-group">
+                {% csrf_token %}
+                {{ form|crispy }}
+
+                <!-- Apelido -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="username">Username:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" autocomplete="current-password" required 
+                        id="username" name="username">
+                    </div>
+                </div> -->
+
+                <!-- Nome -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="nome">Nome:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="nome" autofocus autocomplete="nome"
+                               required name="nome">
+                    </div>
+                </div> -->
+
+                <!-- CPF -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="cpf_cnpj">CPF/CNPJ:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control"
+                               id="cpf_cnpj" name="cpf_cnpj">
+                    </div>
+                </div> -->
+
+                <!-- Telefone -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="telefone">Telefone:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control"
+                               id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX">
+                    </div>
+                </div> -->
+
+                <!-- Email -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="email">E-mail:</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control"
+                               id="email" name="email" placeholder="exemplo@dominio">
+                    </div>
+                </div> -->
+
+                <!-- Gênero -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-8" for="id_sexo">
+                        Sexo:</p>
+                        <input type="radio" name="genero" value="masculino" id="masculino" checked>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="genero" value="feminino" id="feminino">
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" name="genero" value="outro" id="outro">
+                        <label for="outro">Outro</label>
+                </div> -->
+
+                <!-- Endereço -->
+                <!-- <div name="endereco">
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3" for="logradouro">Logradouro:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   id="logradouro" name="logradouro">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3" for="numero">Numero:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control"
+                                   id="numero" name="numero">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3" for="bairro">Bairro:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   id="bairro" name="bairro">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3" for="cidade">Cidade:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   id="cidade" name="cidade">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3" for="estado">Estado:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   id="estado" name="estado">
+                        </div>
+                    </div>
+    
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3" for="cep">CEP:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   id="cep" name="cep" placeholder="XXXXX-XXX">
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Senha -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="senha">Senha:</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" autocomplete="current-password" required 
+                        id="senha" name="senha">
+                    </div>
+                </div> -->
+
+                <!-- Confirmar Senha -->
+                <!-- <div class="form-group row">
+                    <label class="control-label col-sm-3" for="confirmaSenha">Confirme a senha:</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" autocomplete="current-password" required 
+                        id="confirmaSenha" name="confirmaSenha">
+                    </div>
+                </div> -->
+
+                <button type="submit" class="btn btn-success">Registrar</button>
+
+            
+            </form>
+            
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="{% static 'js/script.js' %}"></script> -->
+</body>
+
+</html>
+{% endblock%}
